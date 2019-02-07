@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+<<<<<<< HEAD
 
 has_secure_password
 
@@ -8,6 +9,11 @@ has_secure_password
   has_many :gossips, foreign_key: 'author_id', class_name: 'Gossip'
   has_many :commentaries, foreign_key: 'author_id', class_name: 'Commentary'
   has_many :sub_commentaries, foreign_key: 'author_id', class_name: 'SubCommentary'
+=======
+  has_many :gossips, foreign_key: 'author_id'
+  has_many :commentaries, foreign_key: 'author_id'
+  has_many :sub_commentaries, foreign_key: 'author_id'
+>>>>>>> 510d0ba761c930da3c4c651128718697155a5860
   has_many :likes, foreign_key: 'author_id', class_name: 'Like'
 	validates :city, presence: true
   validates :first_name, length: { minimum: 3 }, presence: true

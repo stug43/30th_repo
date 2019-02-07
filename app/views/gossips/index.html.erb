@@ -43,7 +43,11 @@
         
               <% @gossips.each_with_index do |gossip, index| %>
               <li class="list-group-item d-flex justify-content-between align-items-center">
+<<<<<<< HEAD
                 <span class="col"><span><%= link_to gossip.title, gossip_path((index+1).to_s) %></span></span>
+=======
+                <%= link_to gossip.title, gossip_path((index+1).to_s) %>
+>>>>>>> 510d0ba761c930da3c4c651128718697155a5860
                 
                 <span class="col text-right"><span class="badge badge-primary badge-pill">par <%= link_to gossip.author.user_name, user_path(gossip.author.id), {:style=>'color:#FFFFFF'} %> <%= link_to "(#{gossip.author.city.name})", city_path(gossip.author.city.id), {:style=>'color:#FFFFFF'} %></span></span>
               </li>

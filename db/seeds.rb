@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.eager_load!
 models_array = [City, User, Gossip, Commentary, SubCommentary, Like]
 # Sets the locale to "France":
@@ -22,8 +24,12 @@ puts "Création de tables de données pour #{models_array.join(' ')}"
 puts '-' * 50
 puts
 
+<<<<<<< HEAD
 
 models_items_count = Hash[ [['City', 10], ['User', 20], ['Gossip', 50],
+=======
+models_items_count = Hash[ [['User', 20], ['Gossip', 50],
+>>>>>>> 510d0ba761c930da3c4c651128718697155a5860
                             ['Commentary', 100], ['SubCommentary', 40], ['Like', 300]] ]
 
 models_array.each do |model|
