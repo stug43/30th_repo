@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-	adaptater: postgresql
+  adaptater: postgresql
   database: Full_Gossip_production
   username: Full_Gossip
   password: <%= ENV['FULL_GOSSIP_DATABASE_PASSWORD'] 
