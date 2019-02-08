@@ -12,16 +12,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_02_07_114105) do
 
-=======
-ActiveRecord::Schema.define(version: 20_190_204_121_102) do
->>>>>>> 510d0ba761c930da3c4c651128718697155a5860
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
-<<<<<<< HEAD
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.string "zip_code"
@@ -37,16 +32,6 @@ ActiveRecord::Schema.define(version: 20_190_204_121_102) do
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_commentaries_on_author_id"
     t.index ["gossip_id"], name: "index_commentaries_on_gossip_id"
-=======
-  create_table 'commentaries', force: :cascade do |t|
-    t.bigint 'author_id'
-    t.bigint 'gossip_id'
-    t.text 'text'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['author_id'], name: 'index_commentaries_on_author_id'
-    t.index ['gossip_id'], name: 'index_commentaries_on_gossip_id'
->>>>>>> 510d0ba761c930da3c4c651128718697155a5860
   end
 
   create_table 'gossips', force: :cascade do |t|
@@ -77,7 +62,6 @@ ActiveRecord::Schema.define(version: 20_190_204_121_102) do
     t.index ['commentary_id'], name: 'index_sub_commentaries_on_commentary_id'
   end
 
-<<<<<<< HEAD
   create_table "users", force: :cascade do |t|
     t.bigint "city_id"
     t.string "first_name"
@@ -90,15 +74,5 @@ ActiveRecord::Schema.define(version: 20_190_204_121_102) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.index ["city_id"], name: "index_users_on_city_id"
-=======
-  create_table 'users', force: :cascade do |t|
-    t.string 'first_name'
-    t.string 'last_name'
-    t.string 'email'
-    t.string 'user_name'
-    t.integer 'age'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
->>>>>>> 510d0ba761c930da3c4c651128718697155a5860
   end
 end
